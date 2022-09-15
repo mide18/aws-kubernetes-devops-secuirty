@@ -8,10 +8,9 @@ pipeline {
               archive 'target/*.jar' //so that they can be downloaded later and make reference
             }
         }
-    stage('Unit Tests') {
+      stage('Unit Tests') {
             steps {
-              sh "mvn test"
-              
+              sh "mvn test"  
             }
         }   
     }
