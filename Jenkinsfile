@@ -18,7 +18,7 @@ pipeline {
         }
       }
     }
-    stage('Docker Build and Push') {
+    stage('Docker Build and Pushs') {
       steps {
         sh 'printenv'
         sh 'docker build -t mide2020/numeric-app:""$GIT_COMMIT"".'
