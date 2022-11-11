@@ -19,15 +19,15 @@ pipeline {
         }
       }
    }
-//     stage('Docker Build and Push') {
-//       steps {
-//         withDockerRegistry([credentialsId: 'dockerhubcre', url: '']) {
-//         sh 'printenv'
-//         sh 'docker build -t mide2020/numeric-app:""$GIT_COMMIT"" .'
-//         sh 'docker push mide2020/numeric-app:""$GIT_COMMIT""'
-//        }
-//       }
-//     }
+    stage('Docker Build and Push') {
+      steps {
+        withDockerRegistry([credentialsId: 'dockerhubcre', url: '']) {
+        sh 'printenv'
+        sh 'docker build -t mide2020/numeric-app:""$GIT_COMMIT"" .'
+        sh 'docker push mide2020/numeric-app:""$GIT_COMMIT""'
+       }
+      }
+    }
 //     stage('Kubernetes Deployment - DEV') {
 //       steps{
 //         withKubeConfig([credentialsId: 'kubeconfig']) {
